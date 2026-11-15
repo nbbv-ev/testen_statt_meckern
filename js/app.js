@@ -638,7 +638,12 @@ function getEvaluation(score) {
     };
   }
   const shortName = getClubShortName();
-  const clubPhrase = shortName === 'BG BiBA' ? 'bei der BG BiBA' : `bei ${shortName}`;
+  let clubPhrase = `bei ${shortName}`;
+  if (shortName === 'BG BiBA') {
+    clubPhrase = 'bei der BG BiBA';
+  } else if (shortName === 'NBBV') {
+    clubPhrase = 'beim NBBV';
+  }
   return {
     rank: '🏆 Schiri-Versteher',
     headline:

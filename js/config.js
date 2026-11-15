@@ -1,101 +1,77 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 /**
  * ============================================================================
- * VEREINS-KONFIGURATION ("Testen statt Meckern" – Basketball-Regelquiz)
+ * VEREINS- / VERBANDS-KONFIGURATION ("Testen statt Meckern" – Regelquiz)
  * ============================================================================
  *
- * Ihr möchtet dieses Regelquiz für euren eigenen Basketballverein nutzen?
- * Ihr müsst KEINE HTML-, CSS- oder App-Dateien umbauen!
- *
- * Passt einfach die Platzhalter-Werte in dieser Datei an eure Vereinsdaten an
- * und legt eure Vereinslogos im Ordner `./assets/` ab. Dadurch könnt ihr später
- * jederzeit mit einem Klick ("Sync fork" auf GitHub) neue Regelfragen aus dem
- * Haupt-Repository übernehmen, ohne dass eure Vereinsdaten überschrieben werden.
+ * Konfiguration für den Niedersächsisch-Bremischen Basketballverband e.V. (NBBV)
  */
 
 window.CLUB_CONFIG = {
   // --------------------------------------------------------------------------
-  // 1. VEREINS-IDENTITÄT & KONTAKT
+  // 1. VERBANDS- / VEREINS-IDENTITÄT & KONTAKT
   // --------------------------------------------------------------------------
   club: {
-    // Kurzname des Vereins (für Header, Titel, Teilen-Text & 10/10-Auswertung)
-    shortName: 'BC Musterstadt',
+    // Kurzname (für Header, Titel, Teilen-Text & 10/10-Auswertung)
+    shortName: 'NBBV',
 
-    // Vollständiger Vereinsname (für Untertitel & Footer)
-    fullName: 'Basketball-Club Musterstadt 1990 e.V.',
+    // Vollständiger Name (für Untertitel & Footer)
+    fullName: 'Niedersächsisch-Bremischer Basketballverband e.V.',
 
-    // Optionale Zusatzzeile im Footer (z. B. Stammvereine, Abteilung oder Slogan;
-    // leer lassen '', falls nicht benötigt)
-    subline: 'Abteilung Basketball · Musterstadt',
+    // Optionale Zusatzzeile im Footer
+    subline: 'Landesverband für Basketball in Niedersachsen und Bremen',
 
     // Name der Aktion / Initiative
     initiativeName: 'Testen statt Meckern',
 
     // Kontakt-E-Mail für Schiedsrichter- & Kampfrichter-Interessierte (Auswertungs-Screen)
-    contactEmail: 'schiri@bc-musterstadt.example',
+    contactEmail: 'info@nbbv.de',
   },
 
   // --------------------------------------------------------------------------
-  // 2. VEREINSFARBEN & ERSCHEINUNGSBILD
+  // 2. FARBEN & ERSCHEINUNGSBILD (NBBV CI)
   // --------------------------------------------------------------------------
-  // Tipp: Die Textfarbe (Weiß oder Schwarz) auf euren Vereinsfarben sowie
-  // abgedunkelte Hover-Farben für Buttons werden automatisch barrierefrei berechnet!
   theme: {
-    // Strukturfarbe (30 %): Header, Kategorie-Badges, Sekundär-Buttons, Score-Ring
-    primaryColor: '#412774',
+    // Strukturfarbe (30 %): NBBV Dunkelblau (#002e48)
+    primaryColor: '#002e48',
 
-    // Akzentfarbe (10 %): Haupt-Buttons (Call-to-Action), Fortschrittsbalken, Fokus-Rahmen
-    accentColor: '#E2322A',
+    // Akzentfarbe (10 %): NBBV Orange/Gold (#d78300)
+    accentColor: '#d78300',
 
-    // Form des Logos: '50%' für runde Logos/Wappen, '0' oder '8px' für eckige/freie Wappen
+    // Form des Logos: '50%' für das runde NBBV-Badge
     logoBorderRadius: '50%',
   },
 
   // --------------------------------------------------------------------------
-  // 3. VEREINSLOGOS & ICONS (Pfade relativ zur index.html)
+  // 3. LOGOS & ICONS (Pfade relativ zur index.html)
   // --------------------------------------------------------------------------
-  // Tipp: Wenn euer Verein nur eine einzige Logo-Datei (z. B. PNG/SVG mit
-  // transparentem Hintergrund) nutzt, tragt einfach bei headerLogo,
-  // cardLogoLight und cardLogoDark denselben Pfad ein.
   logos: {
-    // Logo im farbigen Header oben links
-    headerLogo: './assets/logo-placeholder.svg',
-
-    // Logo in der Schiri-Box auf der Auswertungsseite (Helles Design)
-    cardLogoLight: './assets/logo-placeholder.svg',
-
-    // Logo in der Schiri-Box auf der Auswertungsseite (Dunkles Design)
-    cardLogoDark: './assets/logo-placeholder.svg',
-
-    // Browser-Icon (Favicon)
-    favicon: './assets/logo-placeholder.svg',
-
-    // Barrierefreier Alternativtext für Screenreader
-    altText: 'Vereinswappen BC Musterstadt',
+    // Vereinfachtes, zentriertes NBBV-Vektorlogo (Basketball + NBBV-Wortmarke ohne Kleingedrucktes)
+    headerLogo: './assets/nbbv-logo.svg',
+    cardLogoLight: './assets/nbbv-logo.svg',
+    cardLogoDark: './assets/nbbv-logo.svg',
+    favicon: './assets/nbbv-logo.svg',
+    altText: 'Logo des Niedersächsisch-Bremischen Basketballverbandes e.V. (NBBV)',
   },
 
   // --------------------------------------------------------------------------
-  // 4. IMPRESSUM & DATENSCHUTZ (Pflichtangaben nach § 5 DDG / DSGVO)
+  // 4. IMPRESSUM & DATENSCHUTZ (Offizielle Angaben von www.nbbv.de)
   // --------------------------------------------------------------------------
-  // Ihr habt zwei Möglichkeiten:
-  // Option A (Standard): Tragt eure Vereinsdaten direkt hier ein – sie werden
-  //                      automatisch in die eingebauten Popups eingesetzt.
-  // Option B:            Tragt unten bei `externalImpressumUrl` / `externalPrivacyUrl`
-  //                      die Links zu eurer bestehenden Vereins-Webseite ein. Dann
-  //                      öffnen die Footer-Links direkt eure vorhandene Webseite.
   legal: {
-    organizationName: 'BC Musterstadt 1990 e.V.',
+    organizationName: 'Niedersächsisch-Bremischer Basketballverband e.V. (NBBV)',
     organizationDetails:
-      'Eingetragener Verein (Vereinsregister VR 12345, Amtsgericht Musterstadt)',
-    representativeName: 'Max Mustermann (1. Vorsitzender)',
-    street: 'Musterstraße 1',
-    postalCodeCity: '12345 Musterstadt',
-    email: 'info@bc-musterstadt.example',
-    phone: '', // Optional: Telefonnummer (wird nur eingeblendet, wenn ausgefüllt)
-    responsiblePersonMStV: 'Max Mustermann\nMusterstraße 1\n12345 Musterstadt',
-    supervisoryAuthority: 'zuständigen Landesdatenschutzbehörde',
+      'Registergericht: Amtsgericht Hannover · Registernummer: VR 202 488 · USt-IdNr.: DE349580943',
+    representativeName:
+      'Vorstand (§ 26 / § 30 BGB): Stefan Körner, Carsten Brokelmann, Jörg Meyer, Erik Schliep, Danny Traupe-Busch',
+    street: 'Göttinger Chaussee 115',
+    postalCodeCity: '30459 Hannover',
+    email: 'info@nbbv.de',
+    phone: '0511 449853-11',
+    responsiblePersonMStV:
+      'Niedersächsisch-Bremischer Basketballverband e.V.\nGöttinger Chaussee 115\n30459 Hannover',
+    supervisoryAuthority: 'Landesbeauftragten für den Datenschutz Niedersachsen',
 
-    // Optional (Option B): Externe Links statt eingebauter Dialog-Popups
+    // Optional: Externe Links statt eingebauter Dialog-Popups
     externalImpressumUrl: '',
     externalPrivacyUrl: '',
   },
@@ -103,21 +79,10 @@ window.CLUB_CONFIG = {
   // --------------------------------------------------------------------------
   // 5. ANONYME QUIZ-STATISTIK (GoatCounter – ohne Cookies, DSGVO-konform)
   // --------------------------------------------------------------------------
-  // Standardmäßig fließen die anonymen Quiz-Ergebnisse (welche Regelfrage wird
-  // wie oft richtig/falsch beantwortet?) in die gemeinsame Auswertung ein, damit
-  // wir zu schwere oder missverständliche Fragen im Katalog gezielt verbessern
-  // können. Gleichzeitig wird über den Vereins-Slug erfasst, wie viele Runden
-  // pro Verein gespielt werden.
-  //
-  // - Eigene GoatCounter-Instanz nutzen: Eigene `endpoint`-URL eintragen
-  // - Statistik komplett abschalten: `enabled: false` setzen (entfernt auch
-  //   automatisch das Skript sowie Abschnitt 4 aus der Datenschutzerklärung)
   analytics: {
     enabled: true,
     endpoint: 'https://biba-regeltest.goatcounter.com/count',
-    // Optionales Kürzel für die Vereins-Zuordnung in der Statistik
-    // (wird automatisch aus `club.shortName` gebildet, falls leer gelassen)
-    clubSlug: '',
+    clubSlug: 'nbbv',
   },
 };
 
@@ -142,7 +107,7 @@ window.CLUB_CONFIG = {
       rootStyle.setProperty('--logo-border-radius', cfg.theme.logoBorderRadius);
     }
 
-    const shortName = cfg.club?.shortName || 'BC Musterstadt';
+    const shortName = cfg.club?.shortName || 'NBBV';
     const fullName = cfg.club?.fullName || shortName;
     const initiative = cfg.club?.initiativeName || 'Testen statt Meckern';
 
